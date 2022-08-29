@@ -12,16 +12,16 @@ export class LoggedinheaderComponent implements OnInit {
 
   constructor(private router: Router,private service:Loginservice) { }
   faUser = faUser
-  user;
-  wallet:any=0;
+  Userdetails:any;
+  Wallets:any=0;
 
   ngOnInit(): void {
     if(sessionStorage.getItem('user')){
-    this.service.getUserData(sessionStorage.getItem('user')).subscribe(d=>{
-      this.user=d;
+    this.service.getUserData(sessionStorage.getItem('user')).subscribe((d: any)=>{
+      this.Userdetails=d;
     })
-    this.service.getWalletDetails(sessionStorage.getItem('user')).subscribe(d=>{
-      this.wallet=d;
+    this.service.getWalletDetails(sessionStorage.getItem('user')).subscribe((d: any)=>{
+      this.Wallets=d;
       console.log(d);
 
     });
