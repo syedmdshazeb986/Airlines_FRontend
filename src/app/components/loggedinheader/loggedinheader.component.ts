@@ -10,7 +10,7 @@ import { Loginservice } from 'src/app/services/login.service';
 })
 export class LoggedinheaderComponent implements OnInit {
 
-  constructor(private router: Router,private service:Loginservice) { }
+  constructor(private router: Router,private service:loginservice) { }
   faUser = faUser
   Userdetails:any;
   Wallets:any=0;
