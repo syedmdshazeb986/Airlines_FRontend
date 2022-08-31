@@ -1,7 +1,7 @@
 export interface Airport{
-  AirportId: Number;
-  AirportName: string;
-  City: string;
-  State: string;
-  Country: string;
+  airportId: Number;
+  airportName: string;
+  city: string;
+  state: string;
+  country: string;
 }
